@@ -104,6 +104,9 @@ export const borrowMoney = async (req: Request, res: Response) => {
     if (!user) {
       return res.status(404).json({ message: 'User not found' });
     }
+    if(user.purchasePower < amount) {
+        return res.status(400).json({ message: 'Exceeding purchase power' });
+    }
 
     user.purchasePower -= amount;
     await prisma.user.update({
