@@ -1,4 +1,4 @@
-# Frocker Backed Assignment
+# Froker Backed Assignment
 ## Test API 
 A user can test the API at the given endpoint with dummy data.
 #### Endpoint:-
